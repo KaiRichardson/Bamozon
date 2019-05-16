@@ -61,40 +61,6 @@ function manage() {
         manage();
         break;
     }
-
-    // item = parseInt(response.item_id);
-    // count = parseInt(response.quantity);
-    // // checking if the responce was a number. if not functions will not work
-    // if (isNaN(response.item_id || response.quantity)) {
-
-    //   console.log("******************************************");
-    //   console.log("Please enter a number for ID and Quantity");
-    //   console.log("******************************************");
-    //   manage();
-
-    // } else {
-
-    //   //calling DB
-    //   connection.query('SELECT * FROM products WHERE item_id = ?', item, function (err, result) {
-    //     // if (err) throw err;
-    //     //calculations for price and new quantity
-    //     var userPrice = result[0].price * count;
-    //     var newQuantity = result[0].stock_quantity - count;
-    //     var fianlPrice = userPrice.toFixed(2);
-
-    //     // making sure that the amount requested is less then base stock_quantity
-    //     if (count <= result[0].stock_quantity) {
-
-    //     } else {
-
-    //       // not enough stock for demand, start over
-    //       console.log("\n******************************************");
-    //       console.log("All out of that one, please pick a nother item");
-    //       console.log("******************************************\n");
-    //       manage();
-    //     };
-    //   });
-    // };
   });
 };
 
@@ -167,43 +133,6 @@ function lowInventory() {
     ending();
   });
 };
-
-// function addInventory() {
-
-//   inquirer.prompt([
-//     {
-//       type: "input",
-//       name: "item_id",
-//       message: "What is the ID of the product you would like?"
-//     },
-//     {
-//       type: "input",
-//       name: "quantity",
-//       message: "How many would you like?"
-//     },
-
-//   ]).then(function (response) {
-
-
-//     //updating DB
-//     var dbUpdate = "UPDATE products SET ? WHERE  ?";
-//     connection.query(dbUpdate,
-//       [
-//         {
-//           stock_quantity: newQuantity
-//         },
-//         {
-//           item_id: item
-//         }
-//       ],
-//       function (error) {
-//         // if (error) throw err;
-//         console.log("Your total is: " + fianlPrice);
-//         console.log("******************************************");
-//       });
-//   });
-//   ending();
-// };
 
 function ending() {
   inquirer.prompt([

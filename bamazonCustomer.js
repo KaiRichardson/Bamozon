@@ -156,7 +156,7 @@ function purchase() {
 
           // not enough stock for demand, start over
           console.log("\n******************************************");
-          console.log("All out of that one, please pick a nother item");
+          console.log("Not enough Stock, please pick another item");
           console.log("******************************************\n");
           purchase();
         };
